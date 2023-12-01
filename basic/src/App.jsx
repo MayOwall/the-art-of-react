@@ -1,7 +1,13 @@
 import MyComponent from "./components/MyComponent";
+import MyReducer from "./components/MyReducer";
 
 const App = () => {
-  return <MyComponent name="Ludwig Wittgenstein" />;
+  return (
+    <>
+      <MyReducer />
+      <MyComponent />
+    </>
+  );
 };
 
 export default App;
