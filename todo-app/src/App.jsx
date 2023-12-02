@@ -1,5 +1,11 @@
+import { TodoTemplate, TodoInsert } from './components';
+
 const App = () => {
-  return <div>Todo app</div>;
+  return (
+    <TodoTemplate>
+      <TodoInsert />
+    </TodoTemplate>
+  );
 };
 
 export default App;
