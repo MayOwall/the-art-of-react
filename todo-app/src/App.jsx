@@ -1,9 +1,9 @@
 import { useRef, useCallback, useReducer } from 'react';
-import { TodoTemplate, TodoInsert, TodoList } from './components';
+import { TodoTemplate, TodoInsert, TodoList, Immer } from './components';
 
 const createBulkTodos = () => {
   const array = [];
-  for (let i = 0; i < 2500; i++) {
+  for (let i = 0; i < 3; i++) {
     array.push({
       id: i,
       text: `할 일 ${i}`,
@@ -60,6 +60,7 @@ const App = () => {
 
   return (
     <TodoTemplate>
+      <Immer />
       <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
     </TodoTemplate>
